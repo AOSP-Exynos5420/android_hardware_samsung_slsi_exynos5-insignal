@@ -63,7 +63,7 @@ ifeq ($(TARGET_SOC),exynos5410)
 	LOCAL_CFLAGS += -DSOC_EXYNOS5410
 endif
 
-LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
+LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\" -Wno-narrowing
 
 LOCAL_C_INCLUDES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \

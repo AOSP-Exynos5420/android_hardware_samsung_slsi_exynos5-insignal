@@ -2169,7 +2169,7 @@ static ExynosVideoErrorType MFC_Decoder_ExtensionEnqueue_Inbuf(
         buf.m.planes[i].bytesused = dataSize[i];
 
         /* Temporary storage for Dequeue */
-        pCtx->pInbuf[buf.index].planes[i].addr = (unsigned long)pBuffer[i];
+        pCtx->pInbuf[buf.index].planes[i].addr = (void *)pBuffer[i];
         pCtx->pInbuf[buf.index].planes[i].fd = (unsigned int)pFd[i];
         pCtx->pInbuf[buf.index].planes[i].allocSize = allocLen[i];
     }
